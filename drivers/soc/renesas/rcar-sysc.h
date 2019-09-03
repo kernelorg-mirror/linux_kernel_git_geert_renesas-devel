@@ -44,6 +44,9 @@ struct rcar_sysc_info {
 	int (*init)(void);	/* Optional */
 	const struct rcar_sysc_area *areas;
 	unsigned int num_areas;
+	/* Optional External Request Mask Register */
+	u32 extmask_offs;	/* SYSCEXTMASK register offset */
+	u32 extmask_val;	/* SYSCEXTMASK register mask value */
 };
 
 extern const struct rcar_sysc_info r8a7743_sysc_info;
@@ -56,8 +59,8 @@ extern const struct rcar_sysc_info r8a7790_sysc_info;
 extern const struct rcar_sysc_info r8a7791_sysc_info;
 extern const struct rcar_sysc_info r8a7792_sysc_info;
 extern const struct rcar_sysc_info r8a7794_sysc_info;
-extern const struct rcar_sysc_info r8a7795_sysc_info;
-extern const struct rcar_sysc_info r8a7796_sysc_info;
+extern struct rcar_sysc_info r8a7795_sysc_info;
+extern struct rcar_sysc_info r8a7796_sysc_info;
 extern const struct rcar_sysc_info r8a77965_sysc_info;
 extern const struct rcar_sysc_info r8a77970_sysc_info;
 extern const struct rcar_sysc_info r8a77980_sysc_info;
