@@ -272,7 +272,7 @@
 	};
 
 	sdhi0_4bit_pins: sdhi0-4bit {
-		sd0_ctrl_dat03 {
+		sd0-ctrl-dat03 {
 			pins = "SD0_DATA0", "SD0_DATA1", "SD0_DATA2", "SD0_DATA3",
 			       "SD0_CLK", "SD0_CMD";
 			power-source = <3300>;
@@ -290,14 +290,14 @@
 		 * For output direction rely on correct controller bus-width configuration
 		 * to avoid over-voltage to eMMC e.g. when operating at 3.3V for a 4-bit microSD.
 		 */
-		sd0_dat47 {
+		sd0-dat47 {
 			input-disable;
 			pins = "SD0_DATA4", "SD0_DATA5", "SD0_DATA6", "SD0_DATA7";
 		};
 	};
 
 	sdhi0_4bit_uhs_pins: sdhi0-4bit-uhs {
-		sd0_ctrl_dat03 {
+		sd0-ctrl-dat03 {
 			pins = "SD0_DATA0", "SD0_DATA1", "SD0_DATA2", "SD0_DATA3",
 			       "SD0_CLK", "SD0_CMD";
 			power-source = <1800>;
@@ -315,19 +315,19 @@
 		 * For output direction rely on correct controller bus-width configuration
 		 * to avoid over-voltage to eMMC e.g. when operating at 3.3V for a 4-bit microSD.
 		 */
-		sd0_dat47 {
+		sd0-dat47 {
 			input-disable;
 			pins = "SD0_DATA4", "SD0_DATA5", "SD0_DATA6", "SD0_DATA7";
 		};
 	};
 
 	sdhi0_8bit_uhs_pins: sdhi0-8bit-uhs {
-		sd0_ctrl {
+		sd0-ctrl {
 			pins = "SD0_CLK", "SD0_CMD";
 			power-source = <1800>;
 		};
 
-		sd0_dat {
+		sd0-dat {
 			input-enable;
 			pins = "SD0_DATA0", "SD0_DATA1", "SD0_DATA2", "SD0_DATA3",
 			       "SD0_DATA4", "SD0_DATA5", "SD0_DATA6", "SD0_DATA7";
